@@ -13,6 +13,16 @@
   {{/each}}
 </ul>
 
+<ul>
+  {{#each burgers}}
+  {{#if devoured}}
+  <li>
+	{{burger_name}}
+  </li>
+  {{/if}}
+  {{/each}}
+</ul>
+
 <h2>Add a Burger</h2>
 <form id="create-form">
 
