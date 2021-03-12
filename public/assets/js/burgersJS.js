@@ -17,7 +17,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
           const newEat = e.target.getAttribute('data-devoured');
   
           const newDevoured = {
-            devoured: newEat,
+            devoured: true,
           };
   
           fetch(`/api/burgers/${id}`, {
@@ -33,7 +33,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
             // Check that the response is all good
             // Reload the page so the user can see the new quote
             if (response.ok) {
-              console.log(`changed eaten state to: ${newEat}`);
+              console.log(`changed eaten state to: true`);
               location.reload('/');
             } else {
               alert('something went wrong!');

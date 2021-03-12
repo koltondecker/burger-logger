@@ -20,9 +20,13 @@ const orm = {
         });
     },
 
-    // updateOne: function() {
-    //     console.log('hi'); 
-    // }
+    updateOne: function(tableInput, cols, vals, id, cb) {
+        const queryString = `UPDATE ${tableInput} SET ${cols} = ${vals} WHERE id = ${id}`;
+        connection.query(queryString, (err, result) => {
+            if (err) throw err;
+            cb(result);
+        })
+    }
 
 };
 

@@ -11,9 +11,9 @@ const burger = {
         orm.insertOne('burgers', cols, vals, (res) => cb(res));
     },
     
-    // updateOne(cb) {
-    //     orm.updateOne();
-    // }
+    updateOne(cols, vals, id, cb) {
+        orm.updateOne('burgers', cols, vals, id, (res) => cb(res));
+    }
     
 }
 
