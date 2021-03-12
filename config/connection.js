@@ -8,6 +8,10 @@ const connection = mysql.createConnection({
     port: 3306,
     password: process.env.password,
     database: process.env.database
+    // host: 'localhost',
+    // user: 'root',
+    // password: 'Donutboy123!',
+    // database: 'burgers_db'
 });
 
 connection.query = util.promisify(connection.query);

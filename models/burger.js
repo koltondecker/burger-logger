@@ -1,7 +1,20 @@
+const { insertOne, updateOne } = require('../config/orm');
 const orm = require('../config/orm');
 
-orm.selectAll();
+const burger = {
 
-orm.insertOne();
+    selectAll(cb) {
+        orm.selectAll('burgers', (res) => cb(res));
+    },
 
-orm.updateOne();
+    insertOne(cols, vals, cb) {
+        orm.insertOne('burgers', cols, vals, (res) => cb(res));
+    },
+    
+    // updateOne(cb) {
+    //     orm.updateOne();
+    // }
+    
+}
+
+module.exports = burger;
