@@ -13,6 +13,9 @@ const burger = {
     
     updateOne(cols, vals, id, cb) {
         orm.updateOne('burgers', cols, vals, id, (res) => cb(res));
+    },
+    deleteOne(id, cb) {
+        orm.deleteOne('burgers', id, (res) => cb(res));
     }
     
 }

@@ -1,3 +1,4 @@
+const { query } = require('./connection');
 const connection = require('./connection');
 
 const orm = {
@@ -26,6 +27,14 @@ const orm = {
             if (err) throw err;
             cb(result);
         })
+    },
+
+    deleteOne: function(tableInput, id, cb) {
+        const queryString = `DELETE FROM ${tableInput} WHERE id = ${id}`;
+        connection.query(queryString, (err, result) => {
+            if (err) throw err;
+            cb(result);
+        });
     }
 
 };

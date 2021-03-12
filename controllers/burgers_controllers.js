@@ -28,5 +28,11 @@ router.put('/api/burgers/:id', (req, res) => {
     });
 });
 
+router.delete('/api/burgers/:id', (req, res) => {
+    burger.deleteOne(req.params.id, (result) => {
+        res.json({ id: result.insertId });
+    });
+});
+
 // Export routes for server.js to use.
 module.exports = router;

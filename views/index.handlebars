@@ -1,6 +1,8 @@
 <h1>Eat Da Burger!</h1>
 
-<ul>
+<img src="/assets/img/burger.png" alt="burger" width="300px" height="auto">
+
+{{!-- <ul id="not-devoured-list" class="burger-list">
   {{#each burgers}}
   {{#unless devoured}}
   <li>
@@ -11,13 +13,25 @@
   </li>
   {{/unless}}
   {{/each}}
-</ul>
+</ul> --}}
 
-<ul>
+<div class="collection">
+  {{#each burgers}}
+  {{#unless devoured}}
+    <a href="#!" class="collection-item">
+      {{burger_name}}
+    </a>
+    <button class="eat-burger" data-id="{{id}}" data-devoured="{{devoured}}">Eat Da Burger!</button>
+  {{/unless}}
+  {{/each}}
+</div>
+
+<ul id="devoured-list" class="burger-list">
   {{#each burgers}}
   {{#if devoured}}
   <li>
 	{{burger_name}}
+  <button class="delete-burger" data-id="{{id}}" data-devoured="{{devoured}}">Delete Burger!</button>
   </li>
   {{/if}}
   {{/each}}
