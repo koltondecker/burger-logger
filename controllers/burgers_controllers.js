@@ -15,6 +15,15 @@ router.get('/', (req, res) => {
     });
 });
 
+router.get('/api/burgers', (req, res) => {
+    burger.selectAll((data) => {
+        const burgerObject = {
+            burgers: data,
+        };
+        res.json({burgerObject});
+    });
+})
+
 router.post('/api/burgers', (req, res) => {
     burger.insertOne(['burger_name', 'devoured'], [req.body.burger_name, req.body.devoured], (result) => {
       // Send back the ID of the new quote
