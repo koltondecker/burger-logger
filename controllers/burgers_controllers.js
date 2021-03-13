@@ -20,7 +20,7 @@ router.get('/api/burgers', (req, res) => {
         const burgerObject = {
             burgers: data,
         };
-        res.json({burgerObject});
+        res.json(burgerObject);
     });
 })
 

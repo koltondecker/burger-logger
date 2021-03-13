@@ -6,30 +6,35 @@
     <div class="col s12 m6">
       <h3>Ready to be Eaten!</h3>
 
-      <div id="not-devoured-list" class="collection">
+      <ul id="not-devoured-list">
         {{#each burgers}}
         {{#unless devoured}}
-          <a href="#!" class="collection-item">
-            {{burger_name}}
-          </a>
-          <button class="eat-burger right-align" data-id="{{id}}" data-devoured="{{devoured}}">Eat Da Burger!</button>
+          <div class="burger-div">
+            <li class="burger-item">
+              {{burger_name}}
+              <button class="eat-burger" data-id="{{id}}" data-devoured="{{devoured}}">Eat Da Burger!</button>
+            </li>
+          </div>
+          
         {{/unless}}
         {{/each}}
-      </div>
+      </ul>
     </div>
     <div class="col s12 m6">
       <h3>Devoured!</h3>
 
-      <div id="devoured-list" class="collection">
+      <ul id="devoured-list">
         {{#each burgers}}
         {{#if devoured}}
-          <a href="#!" class="collection-item">
+        <div class="burger-div">
+          <li class="burger-item">
             {{burger_name}}
-          </a>
-          <button class="delete-burger" data-id="{{id}}" data-devoured="{{devoured}}">Delete Burger!</button>
+            <button class="delete-burger" data-id="{{id}}" data-devoured="{{devoured}}">Delete Burger!</button>
+          </li>
+        </div>
         {{/if}}
         {{/each}}
-      </div>
+      </ul>
     </div>
   </div>
   <div class="row">
