@@ -4,13 +4,13 @@
 
 body {
     display: flex;
-    align-items: center;
     justify-content: center;
     text-align: center;
     background-image: url('../img/burger-pattern-background_67556-123.jpeg');
+    font-family: 'Architects Daughter', cursive, sans-serif;
 }
 
-.container-fluid {
+.container {
     margin: 0 0 1rem 1rem;
 }
 
