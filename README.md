@@ -13,6 +13,8 @@
 ## Description: 
 Being able to track new burgers you want to try or plan on eating and keeping track of whether they were eaten or not is important. This application can serve as a template for a variety of tracking purposes. With the ability to add a new entry to the database, update the database item via changing it to devoured, and delete the item completely, you are presented with a CRUD approach application. This project is deployed on Heroku and utilized MySQL for backend database connection. 
 
+<p>Find the deployed project at <a href="https://burger-logger-kolton-decker.herokuapp.com/">https://burger-logger-kolton-decker.herokuapp.com/</a>.</p>
+
 <p>Find the source code at <a href="https://github.com/koltondecker/burger-logger">https://github.com/koltondecker/burger-logger</a>.</p>
 
 <p><a href="https://www.npmjs.com/package/mysql">MYSQL</a> was used for this project.</p>
